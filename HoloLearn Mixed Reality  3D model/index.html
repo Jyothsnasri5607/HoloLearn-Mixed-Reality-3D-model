@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HoloLearn - Mixed Reality AI Teacher</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Three.js libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/build/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/examples/js/controls/OrbitControls.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/examples/js/loaders/GLTFLoader.js"></script>
+</head>
+<body>
+    <div class="app-container">
+        <header class="app-header">
+            <h1>HoloLearn</h1>
+            <p>Mixed Reality AI Teacher</p>
+        </header>
+
+        <div class="main-content">
+            <div class="scene-container" id="scene-container">
+                <!-- Three.js will render here -->
+            </div>
+
+            <div class="control-panel">
+                <div class="topic-selector">
+                    <h3>Select a Topic</h3>
+                    <div class="topic-buttons">
+                        <button class="topic-btn" data-topic="solar-system">Solar System</button>
+                        <button class="topic-btn" data-topic="heart-anatomy">Heart Anatomy</button>
+                        <button class="topic-btn" data-topic="volcano">Volcano</button>
+                    </div>
+                </div>
+
+                <div class="chat-interface">
+                    <h3>Ask the AI Teacher</h3>
+                    <div class="chat-messages" id="chat-messages"></div>
+                    <div class="chat-input">
+                        <input type="text" id="user-input" placeholder="Ask a question...">
+                        <button id="send-btn">Send</button>
+                        <button id="mic-btn" class="mic-btn">🎤</button>
+                    </div>
+                </div>
+
+                <div class="quiz-container hidden" id="quiz-container">
+                    <h3>Quiz</h3>
+                    <div class="quiz-question" id="quiz-question"></div>
+                    <div class="quiz-options" id="quiz-options"></div>
+                    <div class="quiz-feedback hidden" id="quiz-feedback"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="voice-controls">
+            <button id="tts-toggle">Toggle Voice Narration</button>
+            <div class="voice-status" id="voice-status">Voice: Enabled</div>
+        </div>
+    </div>
+
+    <!-- ✅ Put your app.js here at the end -->
+    <script src="app.js"></script>
+</body>
+</html>
